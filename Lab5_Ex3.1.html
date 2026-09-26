@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infographic: Lợi Ích Của Công Nghệ Số Trong Học Tập</title>
+    <!-- Nhúng FontAwesome để sử dụng các Icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #1A5276;
+            --secondary-blue: #2980B9;
+            --light-blue: #EBF5FB;
+            --text-dark: #333;
+            --text-gray: #666;
+            --bg-color: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .infographic-container {
+            max-width: 800px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* Phần Tiêu đề */
+        .header {
+            text-align: center;
+            padding: 40px 20px 20px;
+        }
+        .header h1 {
+            color: var(--primary-blue);
+            font-size: 32px;
+            margin: 0 0 10px;
+            text-transform: uppercase;
+            line-height: 1.3;
+        }
+        .header p {
+            color: var(--secondary-blue);
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Phần Media (Hiển thị Video Youtube) */
+        .media-section {
+            display: flex;
+            justify-content: center;
+            background-color: var(--light-blue);
+            padding: 30px 20px;
+            border-top: 2px dashed #D6EAF8;
+            border-bottom: 2px dashed #D6EAF8;
+        }
+        .video-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            width: 315px;
+            height: 560px; /* Kích thước chuẩn cho YouTube Shorts */
+        }
+
+        /* Phần Danh sách Infographic */
+        .content-section {
+            padding: 40px 30px;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-blue);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .icon-wrapper i {
+            color: white;
+            font-size: 35px;
+        }
+        .feature-text {
+            margin-left: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .feature-title-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .step-number {
+            background-color: var(--primary-blue);
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 12px;
+        }
+        .feature-title {
+            color: var(--primary-blue);
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+        .feature-desc {
+            color: var(--text-dark);
+            font-size: 16px;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Khung Tổng kết bên dưới */
+        .summary-box {
+            background-color: white;
+            border: 2px solid #D6EAF8;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 0 30px 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .summary-box .icon {
+            background-color: #85C1E9;
+            color: white;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            flex-shrink: 0;
+        }
+        .summary-text {
+            color: var(--primary-blue);
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* Chân trang */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--text-gray);
+            font-size: 13px;
+            border-top: 1px solid #eee;
+            background-color: #fafafa;
+        }
+
+        /* Responsive cho thiết bị di động */
+        @media (max-width: 600px) {
+            .feature-item { 
+                flex-direction: column; 
+                text-align: center; 
+            }
+            .feature-text { 
+                margin-left: 0; 
+                margin-top: 15px; 
+                align-items: center; 
+            }
+            .summary-box { 
+                flex-direction: column; 
+                text-align: center; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="infographic-container">
+        <!-- Phần Tiêu đề -->
+        <div class="header">
+            <h1>Lợi ích của<br>Công nghệ số trong học tập</h1>
+            <p>Học tập linh hoạt hơn, chủ động hơn, kết nối hơn</p>
+        </div>
+
+        <!-- Phần Nhúng Video YouTube Shorts thay thế cho hình ảnh tĩnh -->
+        <div class="media-section">
+            <div class="video-container">
+                <iframe width="100%" height="100%" 
+                        src="https://www.youtube.com/embed/0Ce1LRnNx50" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Phần Nội dung các bước -->
+        <div class="content-section">
+            
+            <div class="feature-item">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-book-globe"></i>
+                </div>
+                <div class="feature-text">
+                    <div class="feature-title-row">
+                        <div class="step-number">01</div>
+                        <h3 class="feature-title">Tiếp cận tri thức rộng mở</h3>
+                    </div>
+                    <p class="feature-desc">Học từ nhiều nguồn tài liệu và khóa học trực tuyến</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-user-gear"></i>
+                </div>
+                <div class="feature-text">
+                    <div class="feature-title-row">
+                        <div class="step-number">02</div>
+                        <h3 class="feature-title">Cá nhân hóa việc học</h3>
+                    </div>
+                    <p class="feature-desc">Lựa chọn tốc độ, nội dung và cách học phù hợp</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-users-viewfinder"></i>
+                </div>
+                <div class="feature-text">
+                    <div class="feature-title-row">
+                        <div class="step-number">03</div>
+                        <h3 class="feature-title">Tăng tương tác và hợp tác</h3>
+                    </div>
+                    <p class="feature-desc">Trao đổi, làm việc nhóm và nhận phản hồi thuận tiện</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="feature-text">
+                    <div class="feature-title-row">
+                        <div class="step-number">04</div>
+                        <h3 class="feature-title">Phát triển kỹ năng số</h3>
+                    </div>
+                    <p class="feature-desc">Rèn luyện tư duy công nghệ cho tương lai</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Khung tổng kết -->
+        <div class="summary-box">
+            <div class="icon">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <p class="summary-text">Công nghệ số giúp việc học trở nên linh hoạt, trực quan và phù hợp hơn với nhu cầu của mỗi người học.</p>
+        </div>
+
+        <!-- Chân trang -->
+        <div class="footer">
+            &copy; Bản quyền nội dung thuộc về nguồn gốc tương ứng.<br>
+            Infographic được thiết kế lại bằng HTML/CSS theo mẫu tham khảo.
+        </div>
+    </div>
+
+</body>
+</html>
